@@ -72,12 +72,19 @@ public final class PuenteNorteClient {
         public ResourceLocation getTextureLocation(VillageDefender entity) {
             if (entity instanceof VillageDefenderChief) {
                 return new ResourceLocation(AndroidsCompatMod.MOD_ID,
-                        "textures/entity/village_defenders/defender_chief.png");
+                    "textures/entity/village_defenders/defender_chief.png");
+            }
+            if (entity.hasCommanderSkin()) {
+                return new ResourceLocation(AndroidsCompatMod.MOD_ID,
+                        "textures/entity/village_defenders/defender_commander.png");
             }
             String file = String.format(java.util.Locale.ROOT, "defender_%02d.png",
                     entity.getSkinVariant() + 1);
-            return new ResourceLocation(AndroidsCompatMod.MOD_ID,
+            ResourceLocation skin = new ResourceLocation(AndroidsCompatMod.MOD_ID,
                     "textures/entity/village_defenders/" + file);
+            return net.minecraft.client.Minecraft.getInstance().getResourceManager()
+                    .getResource(skin).isPresent() ? skin : new ResourceLocation(AndroidsCompatMod.MOD_ID,
+                    "textures/entity/village_defenders/defender_01.png");
         }
     }
 

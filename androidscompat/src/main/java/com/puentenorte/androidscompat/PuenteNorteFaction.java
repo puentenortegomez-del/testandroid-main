@@ -244,7 +244,10 @@ public final class PuenteNorteFaction {
                     candidate -> candidate.isAlive() && !candidate.isSpectator()).size();
             int golems = level.getEntitiesOfClass(IronGolem.class, area, Entity::isAlive).size();
             int villagers = level.getEntitiesOfClass(Villager.class, area, Entity::isAlive).size();
-            int defenders = players * 4 + golems * 2 + villagers / 4;
+                int villageGuards = level.getEntitiesOfClass(VillageDefender.class, area,
+                    guard -> guard.isAlive() && !guard.getPersistentData()
+                        .getBoolean(VillageDefender.RECRUITED_TAG)).size();
+                int defenders = players * 4 + golems * 2 + villageGuards * 3 + villagers / 4;
             boolean changed = false;
 
             if (village.isSiegeActive()) {

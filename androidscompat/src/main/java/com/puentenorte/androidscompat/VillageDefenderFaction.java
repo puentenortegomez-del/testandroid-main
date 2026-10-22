@@ -99,11 +99,14 @@ public final class VillageDefenderFaction {
                 VillageOccupationData data = VillageOccupationData.get(event.getServer());
                 data.getVillage(level.dimension().location(), village);
                 ensureGarrison(level, village);
-                if (data.villagesAreHostile()) synchronizeWarTargets(level, village);
+                boolean villageWar = isVillageAtWarWithPuenteNorte(data, level, village);
+                if (data.villagesAreHostile() || villageWar)
+                    synchronizeWarTargets(level, village, data.villagesAreHostile());
                 scheduleLogisticsRoute(level, village, data);
                 if (AndroidsCompatMod.VILLAGE_DEFENDERS_ENABLED.get()
                     && data.canStartSkirmish(level.dimension().location(), village, level.getGameTime())
-                    && level.getRandom().nextDouble() < AndroidsCompatMod.VILLAGE_SKIRMISH_CHANCE.get()) {
+                    && (villageWar || level.getRandom().nextDouble()
+                        < AndroidsCompatMod.VILLAGE_SKIRMISH_CHANCE.get())) {
                     data.scheduleSkirmish(level.dimension().location(), village,
                             level.getGameTime() + SKIRMISH_COOLDOWN_TICKS);
                     startSkirmish(level, village, player);
@@ -121,10 +124,15 @@ public final class VillageDefenderFaction {
 
         VillageOccupationData diplomacy = VillageOccupationData.get(level.getServer());
         LivingEntity current = guard.getTarget();
+        BlockPos home = guard.getPersistentData().contains(VillageDefender.HOME_X_TAG)
+                ? new BlockPos(guard.getPersistentData().getInt(VillageDefender.HOME_X_TAG),
+                    guard.getPersistentData().getInt(VillageDefender.HOME_Y_TAG),
+                    guard.getPersistentData().getInt(VillageDefender.HOME_Z_TAG)) : null;
+        boolean villageWar = home != null && isVillageAtWarWithPuenteNorte(diplomacy, level, home);
         if (current instanceof PuenteNorteRaider raider) {
             boolean skirmish = guard.getPersistentData().getBoolean("androidscompat_village_skirmish")
                     && raider.getPersistentData().getBoolean("androidscompat_village_skirmish");
-            if (!diplomacy.villagesAreHostile() && !skirmish) {
+            if (!diplomacy.villagesAreHostile() && !villageWar && !skirmish) {
                 guard.setTarget(null);
                 current = null;
             }
@@ -133,7 +141,7 @@ public final class VillageDefenderFaction {
             current = null;
         }
 
-        if (current == null && diplomacy.villagesAreHostile()) {
+        if (current == null && (diplomacy.villagesAreHostile() || villageWar)) {
             LivingEntity enemy = nearestPuenteNorte(guard, 48.0D);
             if (enemy == null) enemy = level.getEntitiesOfClass(ServerPlayer.class,
                     guard.getBoundingBox().inflate(32.0D), player -> player.isAlive() && !player.isSpectator())
@@ -248,7 +256,8 @@ public final class VillageDefenderFaction {
         DifficultyInstance difficulty = level.getCurrentDifficultyAt(spawn);
         guard.finalizeSpawn(level, difficulty, MobSpawnType.EVENT, null, null);
         guard.setVillageHome(village);
-        guard.setSkinVariant(level.getRandom().nextInt(4));
+        guard.setSkinVariant(level.getRandom().nextInt(5));
+        guard.setCommanderSkin(level.getRandom().nextFloat() < 0.22F);
         guard.setPersistenceRequired();
         guard.getPersistentData().putBoolean(VillageDefender.RECRUITED_TAG, recruited);
         level.addFreshEntity(guard);
@@ -348,11 +357,21 @@ public final class VillageDefenderFaction {
                 .stream().min(Comparator.comparingDouble(from::distanceToSqr)).orElse(null);
     }
 
-    private static void synchronizeWarTargets(ServerLevel level, BlockPos village) {
+    private static boolean isVillageAtWarWithPuenteNorte(VillageOccupationData data,
+                                                          ServerLevel level, BlockPos village) {
+        VillageOccupationData.VillageRecord record = data.getVillage(
+                level.dimension().location(), village);
+        return record.isSiegeActive() || record.isOccupied();
+    }
+
+    private static void synchronizeWarTargets(ServerLevel level, BlockPos village,
+                                               boolean globalHostility) {
         AABB area = new AABB(village).inflate(64.0D, 24.0D, 64.0D);
         List<VillageDefender> defenders = level.getEntitiesOfClass(VillageDefender.class, area,
                 guard -> guard.isAlive());
         if (defenders.isEmpty()) return;
+        if (!globalHostility && !isVillageAtWarWithPuenteNorte(
+            VillageOccupationData.get(level.getServer()), level, village)) return;
         for (PuenteNorteRaider raider : level.getEntitiesOfClass(PuenteNorteRaider.class, area,
                 mob -> mob.isAlive())) {
             LivingEntity current = raider.getTarget();
@@ -391,7 +410,7 @@ public final class VillageDefenderFaction {
             return;
         }
         if ("flintlock".equals(weaponPath)) {
-            applyFlintlockAttachments(weapon, defender, chief || random.nextFloat() < 0.75F);
+            applyFlintlockAttachments(weapon, defender, true);
         }
         defender.setItemInHand(InteractionHand.MAIN_HAND, weapon);
         defender.setDropChance(net.minecraft.world.entity.EquipmentSlot.MAINHAND, 0.0F);

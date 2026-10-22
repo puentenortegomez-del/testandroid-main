@@ -27,6 +27,8 @@ public class VillageDefender extends Pillager {
     public static final String NEXT_RELOAD_TAG = "androidscompat_village_next_reload";
     private static final EntityDataAccessor<Integer> SKIN_VARIANT =
             SynchedEntityData.defineId(VillageDefender.class, EntityDataSerializers.INT);
+        private static final EntityDataAccessor<Boolean> COMMANDER_SKIN =
+            SynchedEntityData.defineId(VillageDefender.class, EntityDataSerializers.BOOLEAN);
 
     public VillageDefender(EntityType<? extends Pillager> type, Level level) {
         super(type, level);
@@ -37,6 +39,7 @@ public class VillageDefender extends Pillager {
     protected void defineSynchedData() {
         super.defineSynchedData();
         entityData.define(SKIN_VARIANT, 0);
+        entityData.define(COMMANDER_SKIN, false);
     }
 
     @Override
@@ -64,14 +67,21 @@ public class VillageDefender extends Pillager {
     }
 
     public void setSkinVariant(int skin) {
-        int variant = Math.floorMod(skin, 4);
+        int variant = Math.floorMod(skin, 5);
         getPersistentData().putInt(SKIN_TAG, variant);
         entityData.set(SKIN_VARIANT, variant);
     }
 
     public int getSkinVariant() {
-        return Math.floorMod(entityData.get(SKIN_VARIANT), 4);
+        return Math.floorMod(entityData.get(SKIN_VARIANT), 5);
     }
+
+    public void setCommanderSkin(boolean commander) {
+        getPersistentData().putBoolean("androidscompat_village_commander_skin", commander);
+        entityData.set(COMMANDER_SKIN, commander);
+    }
+
+    public boolean hasCommanderSkin() { return entityData.get(COMMANDER_SKIN); }
 
     @Override
     protected void populateDefaultEquipmentSlots(net.minecraft.util.RandomSource random,
@@ -84,7 +94,9 @@ public class VillageDefender extends Pillager {
     public void readAdditionalSaveData(net.minecraft.nbt.CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         setSkinVariant(getPersistentData().contains(SKIN_TAG)
-                ? getPersistentData().getInt(SKIN_TAG) : getRandom().nextInt(4));
+            ? getPersistentData().getInt(SKIN_TAG) : getRandom().nextInt(5));
+        setCommanderSkin(this instanceof VillageDefenderChief
+            || getPersistentData().getBoolean("androidscompat_village_commander_skin"));
         getPersistentData().putBoolean(DEFENDER_TAG, true);
     }
 
@@ -92,6 +104,7 @@ public class VillageDefender extends Pillager {
     public void addAdditionalSaveData(net.minecraft.nbt.CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putInt(SKIN_TAG, getSkinVariant());
+        tag.putBoolean("androidscompat_village_commander_skin", hasCommanderSkin());
     }
 
     static boolean isDefender(LivingEntity entity) {

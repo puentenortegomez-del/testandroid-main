@@ -88,17 +88,25 @@ up to 10 health, and clears harmful status effects.
 ## Allied Village Guard
 
 Loaded villages near players can raise a persistent guard garrison with one
-chief and randomized soldier skins. The guard is allied by default. Player
-damage against guards or village residents increases a shared world tension
-meter; at 100%, every village recognizes the offender and the guard becomes
-hostile. `/aldea estado` reports current diplomacy. The server setting
+chief and five randomized soldier skins, using the supplied MinecraftSkins.com
+army-villager, urban, Irish and revolutionary textures. The chief uses the
+separate commander skin. The guard is allied by default. Player damage against
+guards or village residents increases a shared world tension meter; at 100%,
+every village recognizes the aggression and the guard becomes hostile.
+`/aldea estado` reports current diplomacy. The server setting
 `villageDefendersEnabled` enables the system and `villageSkirmishChance`
 controls the chance of a random guard-versus-Puente Norte battle during a
 village scan.
 
+Separately, a Puente Norte siege or occupation puts that village's guard into a
+local dynamic war; the conflict spreads as Puente Norte sieges or occupies
+other villages. Random events can trigger a small skirmish near an active
+player.
+
 With Create: Gunsmithing and NTGL present, chiefs use a CGS Flintlock with a
-Stock and Musket Barrel attachment; guards choose a role-weighted CGS weapon
-and carry a limited ammunition reserve. Crossbows are used when CGS/NTGL is
+Stock and Musket Barrel (`flintlock_long_barrel`) attachment; guards choose a
+role-weighted CGS weapon and carry a limited ammunition reserve. Crossbows are
+used when CGS/NTGL is
 unavailable. Nearby aircraft with weapons can be assigned as village air
 support during skirmishes. Unarmed compatible aircraft can fly a two-way
 logistics route between known villages.
