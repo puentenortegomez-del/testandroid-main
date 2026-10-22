@@ -131,18 +131,33 @@ Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAnd
 Conflicting propagated mapping for com/puentenorte/androidscompat/CommanderClient$CommanderScreen/isPauseScreen()Z from net/minecraft/client/gui/screens/Screen/isPauseScreen()Z: isPauseScreen -> m_7043_
 Conflicting propagated mapping for com/puentenorte/androidscompat/CommanderClient$CommanderScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/Screen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for com/puentenorte/androidscompat/CommanderClient$CommanderScreen/init()V from net/minecraft/client/gui/screens/Screen/init()V: init -> m_7856_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$VillageGuardRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z: shouldShowName -> m_6512_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$VillageGuardRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation; from net/minecraft/client/renderer/entity/EntityRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation;: getTextureLocation -> m_5478_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$VillageGuardRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z: shouldShowName -> m_6512_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageOccupationData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/saveddata/SavedData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: save -> m_7176_
 Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefender/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/monster/Pillager/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefender/defineSynchedData()V from net/minecraft/world/entity/monster/Pillager/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefender/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/monster/Pillager/addAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: addAdditionalSaveData -> m_7380_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefender/populateDefaultEquipmentSlots(Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V from net/minecraft/world/entity/monster/Pillager/populateDefaultEquipmentSlots(Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V: populateDefaultEquipmentSlots -> m_213945_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefender/registerGoals()V from net/minecraft/world/entity/monster/Pillager/registerGoals()V: registerGoals -> m_8099_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteRaider/populateDefaultEquipmentSlots(Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V from net/minecraft/world/entity/monster/Pillager/populateDefaultEquipmentSlots(Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V: populateDefaultEquipmentSlots -> m_213945_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteBoss/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/monster/Pillager/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for com/puentenorte/androidscompat/VillageDefenderChief/aiStep()V from net/minecraft/world/entity/raid/Raider/aiStep()V: aiStep -> m_8107_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteBoss/defineSynchedData()V from net/minecraft/world/entity/monster/Pillager/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteBoss/aiStep()V from net/minecraft/world/entity/raid/Raider/aiStep()V: aiStep -> m_8107_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteSoldier/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/entity/monster/Pillager/readAdditionalSaveData(Lnet/minecraft/nbt/CompoundTag;)V: readAdditionalSaveData -> m_7378_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteSoldier/defineSynchedData()V from net/minecraft/world/entity/monster/Pillager/defineSynchedData()V: defineSynchedData -> m_8097_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteSoldier/aiStep()V from net/minecraft/world/entity/raid/Raider/aiStep()V: aiStep -> m_8107_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$RaiderRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z: shouldShowName -> m_6512_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$RaiderRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation; from net/minecraft/client/renderer/entity/EntityRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation;: getTextureLocation -> m_5478_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteClient$RaiderRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z: shouldShowName -> m_6512_
-Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteBoss/aiStep()V from net/minecraft/world/entity/raid/Raider/aiStep()V: aiStep -> m_8107_
-Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z: shouldShowName -> m_6512_
-Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation; from net/minecraft/client/renderer/entity/EntityRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation;: getTextureLocation -> m_5478_
-Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z: shouldShowName -> m_6512_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteFaction$1/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/AbstractContainerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteFaction$1/slotsChanged(Lnet/minecraft/world/Container;)V from net/minecraft/world/inventory/AbstractContainerMenu/slotsChanged(Lnet/minecraft/world/Container;)V: slotsChanged -> m_6199_
 Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteFaction$1/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/AbstractContainerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/LivingEntity;)Z: shouldShowName -> m_6512_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation; from net/minecraft/client/renderer/entity/EntityRenderer/getTextureLocation(Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/resources/ResourceLocation;: getTextureLocation -> m_5478_
+Conflicting propagated mapping for com/puentenorte/androidscompat/PuenteNorteAndroidRenderers$RogueRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z from net/minecraft/client/renderer/entity/MobRenderer/shouldShowName(Lnet/minecraft/world/entity/Entity;)Z: shouldShowName -> m_6512_
 Conflicting propagated mapping for com/puentenorte/androidscompat/NemesisClient$NemesisScreen/isPauseScreen()Z from net/minecraft/client/gui/screens/Screen/isPauseScreen()Z: isPauseScreen -> m_7043_
 Conflicting propagated mapping for com/puentenorte/androidscompat/NemesisClient$NemesisScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/Screen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for com/puentenorte/androidscompat/NemesisClient$NemesisScreen/mouseScrolled(DDD)Z from net/minecraft/client/gui/components/events/ContainerEventHandler/mouseScrolled(DDD)Z: mouseScrolled -> m_6050_
@@ -195,6 +210,14 @@ Writing Output: /home/daw/androidpuentenorte/testandroid-main/androidscompat/bui
   assets/androidscompat/textures/entity/puente_norte_soldier_a.png
   assets/androidscompat/textures/entity/puente_norte_soldier_b.png
   assets/androidscompat/textures/entity/puente_norte_superintendente.png
+  assets/androidscompat/textures/entity/village_defenders/
+  assets/androidscompat/textures/entity/village_defenders/defender_01.png
+  assets/androidscompat/textures/entity/village_defenders/defender_02.png
+  assets/androidscompat/textures/entity/village_defenders/defender_03.png
+  assets/androidscompat/textures/entity/village_defenders/defender_04.png
+  assets/androidscompat/textures/entity/village_defenders/defender_05.png
+  assets/androidscompat/textures/entity/village_defenders/defender_chief.png
+  assets/androidscompat/textures/entity/village_defenders/defender_commander.png
   com/
   com/puentenorte/
   com/puentenorte/androidscompat/
@@ -223,6 +246,8 @@ Writing Output: /home/daw/androidpuentenorte/testandroid-main/androidscompat/bui
   com/puentenorte/androidscompat/PuenteNorteBasicAndroid.class
   com/puentenorte/androidscompat/PuenteNorteBoss.class
   com/puentenorte/androidscompat/PuenteNorteClient$RaiderRenderer.class
+  com/puentenorte/androidscompat/PuenteNorteClient$VillageGuardChiefRenderer.class
+  com/puentenorte/androidscompat/PuenteNorteClient$VillageGuardRenderer.class
   com/puentenorte/androidscompat/PuenteNorteClient.class
   com/puentenorte/androidscompat/PuenteNorteEntities.class
   com/puentenorte/androidscompat/PuenteNorteFaction$1.class
@@ -237,4 +262,9 @@ Writing Output: /home/daw/androidpuentenorte/testandroid-main/androidscompat/bui
   com/puentenorte/androidscompat/SkinColorNetwork$SkinColorMessage.class
   com/puentenorte/androidscompat/SkinColorNetwork.class
   com/puentenorte/androidscompat/TtsSynthesizer.class
+  com/puentenorte/androidscompat/VillageDefender.class
+  com/puentenorte/androidscompat/VillageDefenderChief.class
+  com/puentenorte/androidscompat/VillageDefenderFaction.class
+  com/puentenorte/androidscompat/VillageOccupationData$VillageRecord.class
+  com/puentenorte/androidscompat/VillageOccupationData.class
   pack.mcmeta

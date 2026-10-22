@@ -10,11 +10,23 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Bases are built over time by faction-only basic and Rogue Androids. These variants have no player recipes or spawn eggs. The stockpile processes available Immersive Aircraft and Man of Many Planes recipes from stolen ingredients, then creates the aircraft and assigns a Rogue pilot. Aircraft need compatible mounted weapons to attack."
+      "text": "Villages generate allied guards and a chief with varied military skins. They are friendly by default: attacking or killing guards or villagers raises shared world tension; at the maximum, every village becomes hostile. Check /aldea estado. Diplomacy persists across restarts."
     },
     {
       "type": "patchouli:text",
-      "text": "Soldiers gain health and armor with Nemesis rank. Deaths caused by Puente Norte raise that rank and shape the subfaction of later raids. Rank 3+ Mortadelo soldiers weaken targets on hit; the Superintendent reinforces troops and Filemon enrages when wounded."
+      "text": "Use /aldea mision aceptar for a dynamic contract: eliminate a Puente Norte soldier of the requested rank and five soldiers from its subfaction. Claim emerald rewards with /aldea mision cobrar. /aldea reclutar hires guards for an emerald price that scales with tension and your recruits. Chiefs can lead skirmishes, fighter-aircraft support and logistics flights between villages."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Outposts are built block by block at changing locations as camps, palisades or watchtowers. Some contain a captured rebel behind bars; interact with them to open the cell and free them. Basic and Rogue Android builders are faction-only and have no player recipes or spawn eggs."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Soldiers gain health and armor with Nemesis rank. Deaths caused by Puente Norte raise that rank and shape the subfaction of later raids. Nemeses can learn separate resistances to fire, projectiles and melee, track their marked player, and warn when close. Mortadelo soldiers weaken targets on hit; the Superintendent reinforces troops and Filemon enrages when wounded."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Sieges advance only when at least three attackers outnumber defenders. By default, only one siege runs at a time and Puente Norte can occupy up to three villages; players can liberate one by clearing its garrison and staying nearby. Check status with /androidscompat puentenorte status. Soldiers randomly choose compatible CGS weapons and sometimes spawn with an attachment."
     },
     {
       "type": "patchouli:text",

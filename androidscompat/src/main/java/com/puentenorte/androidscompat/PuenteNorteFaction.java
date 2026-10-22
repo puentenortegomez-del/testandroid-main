@@ -1087,10 +1087,11 @@ public final class PuenteNorteFaction {
                     }
                 }
                 if (center == null) continue;
-                String key = level.dimension().location() + ":" + center.getX() + ":" + center.getZ();
+                BlockPos baseCenter = center;
+                String key = level.dimension().location() + ":" + baseCenter.getX() + ":" + baseCenter.getZ();
                 BASE_BUILDS.computeIfAbsent(key, ignored -> new BaseBuildJob(
-                        level.dimension().location().toString(), center, List.of(), -1,
-                        center.offset(-2, 0, -2), false));
+                    level.dimension().location().toString(), baseCenter, List.of(), -1,
+                    baseCenter.offset(-2, 0, -2), false));
             }
         }
     }

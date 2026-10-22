@@ -45,8 +45,8 @@ public class VillageDefender extends Pillager {
     @Override
     protected void registerGoals() {
         goalSelector.addGoal(0, new FloatGoal(this));
-        goalSelector.addGoal(2, new net.minecraft.world.entity.ai.goal.CrossbowAttackGoal<>(
-                this, 1.0D, 20, 18.0F));
+        goalSelector.addGoal(2, new net.minecraft.world.entity.ai.goal.RangedCrossbowAttackGoal<>(
+            this, 1.0D, 18.0F));
         goalSelector.addGoal(3, new net.minecraft.world.entity.ai.goal.MeleeAttackGoal(this, 1.0D, false));
         goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 0.8D));
         goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 12.0F));

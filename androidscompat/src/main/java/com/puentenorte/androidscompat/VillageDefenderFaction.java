@@ -152,16 +152,13 @@ public final class VillageDefenderFaction {
         if (guard.getTarget() == null) {
             if (guard.getPersistentData().getBoolean(VillageDefender.RECRUITED_TAG)
                     && guard.getPersistentData().hasUUID("androidscompat_village_owner")) {
-                ServerPlayer owner = level.getServer().getPlayerList().getPlayerByUUID(
-                        guard.getPersistentData().getUUID("androidscompat_village_owner"));
+                ServerPlayer owner = level.getServer().getPlayerList().getPlayer(
+                    guard.getPersistentData().getUUID("androidscompat_village_owner"));
                 if (owner != null && owner.serverLevel() == level
                         && guard.distanceToSqr(owner) > 8.0D * 8.0D) {
                     guard.getNavigation().moveTo(owner, 1.0D);
                 }
             } else if (guard.getPersistentData().contains(VillageDefender.HOME_X_TAG)) {
-                BlockPos home = new BlockPos(guard.getPersistentData().getInt(VillageDefender.HOME_X_TAG),
-                        guard.getPersistentData().getInt(VillageDefender.HOME_Y_TAG),
-                        guard.getPersistentData().getInt(VillageDefender.HOME_Z_TAG));
                 if (guard.distanceToSqr(home.getX(), home.getY(), home.getZ()) > 24.0D * 24.0D) {
                     guard.getNavigation().moveTo(home.getX() + 0.5D, home.getY(), home.getZ() + 0.5D, 0.9D);
                 }
@@ -644,7 +641,8 @@ public final class VillageDefenderFaction {
     private static String nearestPuenteNorteSubfaction(ServerLevel level, BlockPos origin) {
         return level.getEntitiesOfClass(PuenteNorteSoldier.class,
                         new AABB(origin).inflate(128.0D), soldier -> soldier.isAlive())
-                .stream().min(Comparator.comparingDouble(soldier -> soldier.distanceToSqr(origin)))
+                .stream().min(Comparator.comparingDouble(soldier -> soldier.distanceToSqr(
+                    origin.getX(), origin.getY(), origin.getZ())))
                 .map(soldier -> soldier.getPersistentData().getString(PuenteNorteSoldier.SUBFACTION_TAG))
                 .filter(name -> !name.isEmpty()).orElse("superintendente");
     }

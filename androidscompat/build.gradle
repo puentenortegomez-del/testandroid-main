@@ -43,12 +43,12 @@ minecraft {
 }
 
 repositories {
+    mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net' }
     maven {
         name = 'BMCLAPIMinecraftMirror'
         url = 'https://bmclapi2.bangbang93.com/maven/'
     }
-    mavenCentral()
-    maven { url = 'https://maven.minecraftforge.net' }
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
 }
 
