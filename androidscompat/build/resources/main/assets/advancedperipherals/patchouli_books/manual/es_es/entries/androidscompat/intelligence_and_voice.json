@@ -1,0 +1,16 @@
+{
+  "name": "Espionaje y voz",
+  "icon": "minecraft:spyglass",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Activa un espía cercano con $(bold)/androidscompat spy on$(). Usa spy cover <nombre> para fijar su identidad, spy off para desactivarlo y $(bold)/androidscompat intel$() para pedir un informe de inteligencia cercano. Los comandos capture, imprison y release gestionan retenidos."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Con Simple Voice Chat instalado, $(bold)/androidscompat speak <texto>$() hace que hable el Android más cercano mediante voz de proximidad. Configura tts.endpoint en serverconfig/androidscompat-server.toml con un servicio HTTP(S) que acepte texto UTF-8 y devuelva audio PCM WAV. El servicio TTS no está incluido."
+    }
+  ]
+}

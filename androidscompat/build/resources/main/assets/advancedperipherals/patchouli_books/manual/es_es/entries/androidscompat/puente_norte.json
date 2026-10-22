@@ -1,0 +1,24 @@
+{
+  "name": "Facción Puente Norte",
+  "icon": "minecraft:crossbow",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Puente Norte asalta aldeas y, si un jugador está cerca de su punto de reaparición, puede atacar su base. En mundos nuevos espera 36.000 ticks (un día y medio) antes de aparecer. Los saqueadores buscan cofres cercanos y pueden robar objetos valiosos del inventario del jugador cuando lo hieren. El botín puede acabar en el almacén de la facción."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Las bases se construyen poco a poco con Androids básicos y Rogue exclusivos de Puente Norte; no tienen recetas ni huevos de aparición para jugadores. El almacén procesa recetas de aviones de Immersive Aircraft y Man of Many Planes cuando hay suficientes ingredientes saqueados. Los pilotos necesitan aeronaves compatibles y armas instaladas para combatir."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Los soldados ganan vida y armadura con el rango Némesis. Las bajas que Puente Norte te causa aumentan ese rango y determinan qué subfacción organiza la siguiente incursión. Los soldados de Mortadelo de rango 3 o más debilitan al golpear; el Superintendente refuerza a sus tropas y Filemón se enfurece al quedar herido."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Pulsa N para abrir el registro NEMESIS (puedes cambiar la tecla en Opciones → Controles). Muestra tropas y jefes activos a 512 bloques, rangos, perfiles, adaptaciones y el historial de Némesis derrotados. Tras tres golpes repetidos del mismo tipo, los soldados aprenden a resistirlo. Si un soldado te mata, asciende; en rango 3 se convierte en stalker y en rango 5 en mini jefe."
+    }
+  ]
+}

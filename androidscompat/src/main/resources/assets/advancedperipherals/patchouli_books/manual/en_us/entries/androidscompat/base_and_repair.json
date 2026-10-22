@@ -1,0 +1,16 @@
+{
+  "name": "Bases and repair",
+  "icon": "minecraft:iron_ingot",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Select the nearest Android and manage its saved home:$(br2)$(li)/androidscompat home set$(li)/androidscompat home show$(li)/androidscompat home clear$(br2)A saved home is used by the return order and as the center of commander patrols. Clearing it lets the commander record a new patrol position."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Field repair: stand within 8 blocks and run $(bold)/androidscompat repair$(). It consumes one iron ingot, restores up to 10 health and removes harmful effects. It cannot heal a full-health Android. $(br2)Inspect an Android with $(bold)/androidscompat stats$() or Jade to see its level, XP, health, accuracy, speed, equipment and current orders."
+    }
+  ]
+}

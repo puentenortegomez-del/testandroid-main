@@ -1,0 +1,81 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'eclipse'
+    id 'maven-publish'
+}
+
+group = 'com.puentenorte'
+version = '1.0.0'
+
+base {
+    archivesName = 'androidscompat'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                androidscompat {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                androidscompat {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = 'BMCLAPIMinecraftMirror'
+        url = 'https://bmclapi2.bangbang93.com/maven/'
+    }
+    mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net' }
+    maven { url = 'https://maven.maxhenkel.de/repository/public' }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    implementation "de.maxhenkel.voicechat:voicechat-api:${voicechat_api_version}"
+    def minecraftModsDir = providers.gradleProperty('minecraftModsDir')
+            .orElse('/home/daw/.minecraft/mods')
+    compileOnly files("${minecraftModsDir.get()}/cc_androids-forge-1.3.0.jar")
+    // Jade is optional at runtime; its local jar is only used to compile the
+    // optional tooltip integration. Override with -PminecraftModsDir=/path/to/mods.
+    compileOnly files("${minecraftModsDir.get()}/Jade-1.20.1-Forge-11.13.3.jar")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title': 'CC:Androids Compatibility',
+            'Specification-Vendor': 'Puentenorte',
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'Puentenorte'
+        ])
+    }
+}

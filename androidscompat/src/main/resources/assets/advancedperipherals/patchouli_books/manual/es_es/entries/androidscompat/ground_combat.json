@@ -1,0 +1,20 @@
+{
+  "name": "Combate terrestre",
+  "icon": "minecraft:iron_sword",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Los Androids necesitan un programa Lua de rol que habilite el combate antes de usar armas NTGL. NTGL gestiona puntería y munición. Recarga: $(bold)/androidscompat reload$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "La armadura se equipa automáticamente. Hay soporte opcional para Curios y Sophisticated Backpacks. Órdenes: hold, patrol, guard, follow <jugador>, rescue, logistics y return."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Usa $(bold)/androidscompat order <orden>$() para ordenar al Android cercano; añade all para afectar a unidades cercanas. También se puede atacar a enemigos compatibles de otros mods."
+    }
+  ]
+}

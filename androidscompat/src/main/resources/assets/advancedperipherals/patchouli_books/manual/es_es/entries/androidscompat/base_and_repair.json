@@ -1,0 +1,16 @@
+{
+  "name": "Bases y reparación",
+  "icon": "minecraft:iron_ingot",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Selecciona el Android más cercano y gestiona su base guardada:$(br2)$(li)/androidscompat home set$(li)/androidscompat home show$(li)/androidscompat home clear$(br2)La base guardada sirve para la orden de regreso y como centro de las patrullas del comandante. Al borrarla, el comandante puede registrar una nueva posición de patrulla."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Reparación: colócate a 8 bloques o menos y ejecuta $(bold)/androidscompat repair$(). Consume un lingote de hierro, restaura hasta 10 puntos de vida y elimina efectos negativos. No consume hierro si el Android está a plena vida. $(br2)Consulta $(bold)/androidscompat stats$() o Jade para ver nivel, XP, vida, precisión, velocidad, equipo y órdenes."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ground combat",
+  "icon": "minecraft:iron_sword",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Androids need a Lua role program to enable combat before using NTGL weapons. NTGL handles aiming and ammunition. Reload: $(bold)/androidscompat reload$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Armor is equipped automatically. Curios and Sophisticated Backpacks have optional support. Orders: hold, patrol, guard, follow <player>, rescue, logistics and return."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Use $(bold)/androidscompat order <order>$() for the nearest Android; add all to affect nearby units. Compatible enemies from other mods can also be targeted."
+    }
+  ]
+}

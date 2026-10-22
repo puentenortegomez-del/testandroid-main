@@ -1,0 +1,36 @@
+{
+  "name": "Puente Norte faction",
+  "icon": "minecraft:crossbow",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Puente Norte raids villages and can attack a nearby player's saved respawn base. New worlds have a 36,000-tick (1.5 in-game day) grace period before it appears. Raiders search nearby containers and can steal valuable carried items when they hit a player; stolen loot can be taken to a faction stockpile."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Villages generate allied guards and a chief with varied military skins. They are friendly by default: attacking or killing guards or villagers raises shared world tension; at the maximum, every village becomes hostile. Check /aldea estado. Diplomacy persists across restarts."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Use /aldea mision aceptar for a dynamic contract: eliminate a Puente Norte soldier of the requested rank and five soldiers from its subfaction. Claim emerald rewards with /aldea mision cobrar. /aldea reclutar hires guards for an emerald price that scales with tension and your recruits. Chiefs can lead skirmishes, fighter-aircraft support and logistics flights between villages."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Outposts are built block by block at changing locations as camps, palisades or watchtowers. Some contain a captured rebel behind bars; interact with them to open the cell and free them. Basic and Rogue Android builders are faction-only and have no player recipes or spawn eggs."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Soldiers gain health and armor with Nemesis rank. Deaths caused by Puente Norte raise that rank and shape the subfaction of later raids. Nemeses can learn separate resistances to fire, projectiles and melee, track their marked player, and warn when close. Mortadelo soldiers weaken targets on hit; the Superintendent reinforces troops and Filemon enrages when wounded."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Sieges advance only when at least three attackers outnumber defenders. By default, only one siege runs at a time and Puente Norte can occupy up to three villages; players can liberate one by clearing its garrison and staying nearby. Check status with /androidscompat puentenorte status. Soldiers randomly choose compatible CGS weapons and sometimes spawn with an attachment."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Press N to open the Nemesis roster (rebind it in Options → Controls). It shows active troops and bosses within 512 blocks, ranks, archetypes, adaptations and defeated Nemeses. After three repeated hits of one damage type, soldiers learn to resist it. A soldier that kills you ranks up: at rank 3 it becomes a stalker; at rank 5, a mini-boss."
+    }
+  ]
+}

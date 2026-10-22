@@ -1,0 +1,16 @@
+{
+  "name": "Squad command",
+  "icon": "minecraft:compass",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Open the field console with $(bold)G$(). Operators can also use $(br2)$(li)/androidscompat commander on|off|status$(li)/androidscompat squad <name>$(li)/androidscompat squad <name> order <order>$(br2)Orders apply to Androids with that squad name within 256 blocks. Available orders: hold, patrol, guard, follow, rescue, logistics and return. Assign squads to individual Androids with /androidscompat squad <name>."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The AI commander uses a CC:Androids Command Android to coordinate nearby units. Its default skin tint is dark blue; dye it to choose another color. Retreat is automatic when a troop is badly hurt. Player-issued orders take priority over patrol behavior. $(br2)The console buttons send commands to the server; operator permission is required for slash commands. The chat shortcuts beginning with !androidscompat are also available."
+    }
+  ]
+}

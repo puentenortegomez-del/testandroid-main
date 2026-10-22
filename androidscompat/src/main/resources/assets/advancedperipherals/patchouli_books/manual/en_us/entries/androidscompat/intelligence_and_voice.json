@@ -1,0 +1,16 @@
+{
+  "name": "Espionage and voice",
+  "icon": "minecraft:spyglass",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Set a nearby Android as a spy with $(bold)/androidscompat spy on$(). Use spy cover <name> to set a cover identity, spy off to deactivate it, and $(bold)/androidscompat intel$() to request a nearby intelligence report. Capture, imprison and release commands manage nearby captives."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "With Simple Voice Chat installed, $(bold)/androidscompat speak <text>$() makes the nearest Android speak through proximity voice. Configure tts.endpoint in serverconfig/androidscompat-server.toml with an HTTP(S) service that accepts UTF-8 text and returns PCM WAV audio. TTS is not bundled."
+    }
+  ]
+}

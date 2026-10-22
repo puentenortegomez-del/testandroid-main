@@ -1,0 +1,16 @@
+{
+  "name": "Air operations",
+  "icon": "immersive_aircraft:boiler",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bring an empty Immersive Aircraft or Man of Many Planes aircraft near an Android, then use $(bold)/androidscompat mount$(). The Android must be the first passenger. Use $(bold)/androidscompat mode combat|bomber|transport$() to set its role and /androidscompat dismount to leave the aircraft."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Combat engages enemy aircraft and hostile ground mobs with mounted weapons. Bomber targets ground enemies with bomb bays. Transport flies without attacking. Aircraft control is server-side and does not take over while a player pilots the craft. Lua role scripts can report status and manage refuelling."
+    }
+  ]
+}

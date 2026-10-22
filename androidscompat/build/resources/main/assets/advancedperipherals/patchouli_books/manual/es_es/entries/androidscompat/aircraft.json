@@ -1,0 +1,16 @@
+{
+  "name": "Operaciones aéreas",
+  "icon": "immersive_aircraft:boiler",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Acerca un avión vacío de Immersive Aircraft o Man of Many Planes al Android y ejecuta $(bold)/androidscompat mount$(). El Android debe ser el primer pasajero. Usa $(bold)/androidscompat mode combat|bomber|transport$() para elegir el rol y /androidscompat dismount para desmontar."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Combate ataca aviones enemigos y criaturas hostiles con las armas instaladas. Bombardero ataca objetivos terrestres con las bahías de bombas. Transporte vuela sin atacar. El control es del servidor y no interfiere si pilota un jugador. Los scripts Lua de rol pueden informar del estado y gestionar combustible."
+    }
+  ]
+}

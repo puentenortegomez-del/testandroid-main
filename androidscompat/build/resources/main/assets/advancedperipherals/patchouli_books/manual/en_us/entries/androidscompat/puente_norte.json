@@ -1,0 +1,24 @@
+{
+  "name": "Puente Norte faction",
+  "icon": "minecraft:crossbow",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Puente Norte raids villages and can attack a nearby player's saved respawn base. New worlds have a 36,000-tick (1.5 in-game day) grace period before it appears. Raiders search nearby containers and can steal valuable carried items when they hit a player; stolen loot can be taken to a faction stockpile."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Bases are built over time by faction-only basic and Rogue Androids. These variants have no player recipes or spawn eggs. The stockpile processes available Immersive Aircraft and Man of Many Planes recipes from stolen ingredients, then creates the aircraft and assigns a Rogue pilot. Aircraft need compatible mounted weapons to attack."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Soldiers gain health and armor with Nemesis rank. Deaths caused by Puente Norte raise that rank and shape the subfaction of later raids. Rank 3+ Mortadelo soldiers weaken targets on hit; the Superintendent reinforces troops and Filemon enrages when wounded."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Press N to open the Nemesis roster (rebind it in Options → Controls). It shows active troops and bosses within 512 blocks, ranks, archetypes, adaptations and defeated Nemeses. After three repeated hits of one damage type, soldiers learn to resist it. A soldier that kills you ranks up: at rank 3 it becomes a stalker; at rank 5, a mini-boss."
+    }
+  ]
+}

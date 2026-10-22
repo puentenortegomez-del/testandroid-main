@@ -1,0 +1,36 @@
+{
+  "name": "Facción Puente Norte",
+  "icon": "minecraft:crossbow",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Puente Norte asalta aldeas y, si un jugador está cerca de su punto de reaparición, puede atacar su base. En mundos nuevos espera 36.000 ticks (un día y medio) antes de aparecer. Los saqueadores buscan cofres cercanos y pueden robar objetos valiosos del inventario del jugador cuando lo hieren. El botín puede acabar en el almacén de la facción."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Las aldeas generan guardias aliados y un jefe con skins militares variadas. Por defecto no te atacan: golpear o matar guardias o aldeanos aumenta la tensión compartida; al llegar al máximo, todas las aldeas pasan a ser hostiles. Consulta /aldea estado. La tensión y la diplomacia sobreviven al reinicio."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Usa /aldea mision aceptar para un contrato dinámico: elimina un soldado de Puente Norte del rango indicado y cinco soldados de su subfacción. Cobra esmeraldas con /aldea mision cobrar. /aldea reclutar contrata guardias por un precio en esmeraldas que escala con la tensión y tus reclutas. Los jefes pueden dirigir escaramuzas, aviones de combate y vuelos logísticos entre aldeas."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Los puestos se construyen bloque a bloque en ubicaciones variables: pueden ser campamentos, empalizadas o torres de vigilancia. Algunos esconden a un rebelde capturado tras barrotes; interactúa con él para abrir la celda y liberarlo. Androids básicos y Rogue construyen; no tienen recetas ni huevos de aparición para jugadores."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Los soldados ganan vida y armadura con el rango Némesis. Las bajas que Puente Norte te causa aumentan ese rango y determinan qué subfacción organiza la siguiente incursión. Los Nemesis pueden aprender resistencias independientes a fuego, proyectiles y melé, te rastrean y avisan cuando se acercan. Los soldados de Mortadelo debilitan al golpear; el Superintendente refuerza a sus tropas y Filemón se enfurece al quedar herido."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Los asedios solo avanzan si al menos tres atacantes superan a los defensores. Por defecto solo hay un asedio simultáneo y Puente Norte puede ocupar hasta tres aldeas; los jugadores pueden recuperar una aldea despejando la guarnición y permaneciendo allí. Consulta el estado con /androidscompat puentenorte status. Los soldados eligen armas CGS compatibles al azar y a veces llevan un accesorio."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Pulsa N para abrir el registro NEMESIS (puedes cambiar la tecla en Opciones → Controles). Muestra tropas y jefes activos a 512 bloques, rangos, perfiles, adaptaciones y el historial de Némesis derrotados. Tras tres golpes repetidos del mismo tipo, los soldados aprenden a resistirlo. Si un soldado te mata, asciende; en rango 3 se convierte en stalker y en rango 5 en mini jefe."
+    }
+  ]
+}

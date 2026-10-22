@@ -1,0 +1,24 @@
+{
+  "name": "Mando de escuadras",
+  "icon": "minecraft:compass",
+  "category": "advancedperipherals:androidscompat",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Abre la consola con $(bold)G$(). También puedes usar:$(br2)$(li)/androidscompat commander on|off|status$(li)/androidscompat squad <nombre>$(li)/androidscompat squad <nombre> order <orden>"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Las órdenes afectan a la escuadra en 256 bloques. Disponibles: hold, patrol, guard, follow, rescue, logistics y return. Asigna Androids cercanos con /androidscompat squad <nombre>."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "El comandante IA coordina tropas con un Command Android de CC:Androids, azul oscuro por defecto. Puedes teñirlo. Las tropas heridas se retiran y las órdenes del jugador tienen prioridad."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "La consola envía órdenes al servidor. Los comandos con / requieren permiso de operador. Los atajos de chat empiezan por !androidscompat."
+    }
+  ]
+}
